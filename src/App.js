@@ -3,9 +3,8 @@ import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import './App.css'; // opcjonalnie – style poniżej
 
-const socket = io(window.location.origin.includes('localhost')
-                  ? 'http://localhost:5000'
-                  : ''); // gdy hostingujesz razem
+const socket = io(' https://client-m62z.onrender.com');
+
 
 function App() {
   const [name, setName]   = useState('');
