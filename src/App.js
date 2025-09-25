@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import './App.css'; // opcjonalnie – style poniżej
 
-const socket = io('https://client-m62z.onrender.com');
-
+const socket = io("https://client-m62z.onrender.com/", {
+  transports: ["websocket", "polling"]
+});
 
 function App() {
   const [name, setName]   = useState('');
